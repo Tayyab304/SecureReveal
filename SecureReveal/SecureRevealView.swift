@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SecureRevealView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
