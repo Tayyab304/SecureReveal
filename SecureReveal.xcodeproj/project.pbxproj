@@ -6,14 +6,38 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		7D70311F3050B310007A87DE /* SecureRevealCore in Frameworks */ = {isa = PBXBuildFile; productRef = 7D70311E3050B310007A87DE /* SecureRevealCore */; };
+		7D70313030518ABC007A87DE /* SecureRevealCore in Frameworks */ = {isa = PBXBuildFile; productRef = 7D70312F30518ABC007A87DE /* SecureRevealCore */; };
+		7D7031323051910F007A87DE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7D7031313051910F007A87DE /* README.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7D70312830518950007A87DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D7031043050AD0C007A87DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D70310B3050AD0C007A87DE;
+			remoteInfo = SecureReveal;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		7D70310C3050AD0C007A87DE /* SecureReveal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecureReveal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D70311C3050B151007A87DE /* SecureRevealCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SecureRevealCore; path = Packages/SecureRevealCore; sourceTree = "<group>"; };
+		7D70312430518950007A87DE /* SecureRevealDeviceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecureRevealDeviceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D7031313051910F007A87DE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		7D70310E3050AD0C007A87DE /* SecureReveal */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = SecureReveal;
+			sourceTree = "<group>";
+		};
+		7D70312530518950007A87DE /* SecureRevealDeviceTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SecureRevealDeviceTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +47,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D70311F3050B310007A87DE /* SecureRevealCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D70312130518950007A87DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D70313030518ABC007A87DE /* SecureRevealCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,7 +65,11 @@
 		7D7031033050AD0C007A87DE = {
 			isa = PBXGroup;
 			children = (
+				7D7031313051910F007A87DE /* README.md */,
+				7D70311C3050B151007A87DE /* SecureRevealCore */,
 				7D70310E3050AD0C007A87DE /* SecureReveal */,
+				7D70312530518950007A87DE /* SecureRevealDeviceTests */,
+				7D70311D3050B306007A87DE /* Frameworks */,
 				7D70310D3050AD0C007A87DE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +78,16 @@
 			isa = PBXGroup;
 			children = (
 				7D70310C3050AD0C007A87DE /* SecureReveal.app */,
+				7D70312430518950007A87DE /* SecureRevealDeviceTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		7D70311D3050B306007A87DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,10 +110,35 @@
 			);
 			name = SecureReveal;
 			packageProductDependencies = (
+				7D70311E3050B310007A87DE /* SecureRevealCore */,
 			);
 			productName = SecureReveal;
 			productReference = 7D70310C3050AD0C007A87DE /* SecureReveal.app */;
 			productType = "com.apple.product-type.application";
+		};
+		7D70312330518950007A87DE /* SecureRevealDeviceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D70312A30518950007A87DE /* Build configuration list for PBXNativeTarget "SecureRevealDeviceTests" */;
+			buildPhases = (
+				7D70312030518950007A87DE /* Sources */,
+				7D70312130518950007A87DE /* Frameworks */,
+				7D70312230518950007A87DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D70312930518950007A87DE /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				7D70312530518950007A87DE /* SecureRevealDeviceTests */,
+			);
+			name = SecureRevealDeviceTests;
+			packageProductDependencies = (
+				7D70312F30518ABC007A87DE /* SecureRevealCore */,
+			);
+			productName = SecureRevealDeviceTests;
+			productReference = 7D70312430518950007A87DE /* SecureRevealDeviceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -82,6 +152,10 @@
 				TargetAttributes = {
 					7D70310B3050AD0C007A87DE = {
 						CreatedOnToolsVersion = 26.2;
+					};
+					7D70312330518950007A87DE = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 7D70310B3050AD0C007A87DE;
 					};
 				};
 			};
@@ -100,12 +174,21 @@
 			projectRoot = "";
 			targets = (
 				7D70310B3050AD0C007A87DE /* SecureReveal */,
+				7D70312330518950007A87DE /* SecureRevealDeviceTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7D70310A3050AD0C007A87DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D7031323051910F007A87DE /* README.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D70312230518950007A87DE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +205,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7D70312030518950007A87DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D70312930518950007A87DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D70310B3050AD0C007A87DE /* SecureReveal */;
+			targetProxy = 7D70312830518950007A87DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		7D7031153050AD0D007A87DE /* Debug */ = {
@@ -251,13 +349,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 78X5454D76;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Authenticate to reveal your private note.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -270,7 +371,7 @@
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -282,13 +383,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 78X5454D76;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Authenticate to reveal your private note.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,8 +405,50 @@
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7D70312B30518950007A87DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 78X5454D76;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.SecureRevealDeviceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SecureReveal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SecureReveal";
+			};
+			name = Debug;
+		};
+		7D70312C30518950007A87DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 78X5454D76;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.SecureRevealDeviceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SecureReveal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SecureReveal";
 			};
 			name = Release;
 		};
@@ -327,7 +473,27 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		7D70312A30518950007A87DE /* Build configuration list for PBXNativeTarget "SecureRevealDeviceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D70312B30518950007A87DE /* Debug */,
+				7D70312C30518950007A87DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7D70311E3050B310007A87DE /* SecureRevealCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SecureRevealCore;
+		};
+		7D70312F30518ABC007A87DE /* SecureRevealCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SecureRevealCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7D7031043050AD0C007A87DE /* Project object */;
 }
